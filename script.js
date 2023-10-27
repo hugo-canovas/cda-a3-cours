@@ -26,10 +26,32 @@ var notFirstParagraphe =  document.querySelector('p:not(:first-child)');
 // console.log(notFirstParagraphe.innerHTML);
 
 var lien = document.querySelector('a');
-console.log(lien.getAttribute('href'));
+// console.log(lien.getAttribute('href'));
 
 
 function switchLink() {
     lien.setAttribute('href', 'https://www.google.com');
     lien.innerHTML = "Faites vos recherches"
+}
+
+var premierParagraphe = document.querySelector('p');
+premierParagraphe.style.fontStyle = "italic";
+// console.log(premierParagraphe.classList);
+// console.log(premierParagraphe.className);
+
+// var classes = premierParagraphe.classList;
+// classes.remove('rouge');
+// classes.add('bleu');
+// classes.replace('rouge', 'bleu');
+// classes.toggle('rouge');
+// classes.toggle('bleu');
+// console.log(classes.contains('rouge'));
+
+function switchColor() {
+    var paragraphes = document.querySelectorAll('p');
+    for (const p of paragraphes) {
+        var color = p.classList;
+        color.toggle('bleu');
+        color.toggle('rouge');
+    }
 }

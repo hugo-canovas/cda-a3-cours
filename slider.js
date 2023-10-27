@@ -13,9 +13,9 @@ function stop() {
 }
 
 function switchImage() {
-    var image = document.querySelector('img')
+    var image = document.querySelector('img');
     var src = image.getAttribute('src');
-    var position = images.indexOf(src.substring(src.lastIndexOf('/')+1))
+    var position = images.indexOf(src.substring(src.lastIndexOf('/')+1));
     position++;
     if(position == images.length){
         position = 0;
